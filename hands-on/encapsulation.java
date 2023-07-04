@@ -1,59 +1,57 @@
 package encapsulation;
+// Example of Encapsulation
 
-class Employee {
-    private int empId;
+  class Student {
+    private int rollNo;
     private String name;
     private int age;
     private String address;
 
-    // Constructor
-    public Employee(int empId, String name, int age, String address) {
-        this.empId = empId;
-        this.name = name;
-        this.age = age;
-        this.address = address;
+    public int getRollNo() {
+        return rollNo;
     }
 
-    // Getter methods
-    public int getEmpId() {
-        return empId;
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    // Setter methods
-    public void setEmpId(int empId) {
-        this.empId = empId;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
-
-    public static void main(String[] args) {
-        // Example usage
-        Employee employee = new Employee(12345, "John Doe", 30, "123 Main Street");
-        System.out.println(employee.getName());  // Output: John Doe
-
-        employee.setAge(31);
-        System.out.println(employee.getAge());  // Output: 31
-    }
 }
+
+  class Main {
+	    public static void main(String[] args) {
+	        Student student = new Student();
+
+	        student.setRollNo(12345);
+	        student.setName("John Doe");
+	        student.setAge(20);
+	        student.setAddress("123 Main St");
+
+	        System.out.println("Roll No: " + student.getRollNo());
+	        System.out.println("Name: " + student.getName());
+	        System.out.println("Age: " + student.getAge());
+	        System.out.println("Address: " + student.getAddress());
+	    }
+	}
