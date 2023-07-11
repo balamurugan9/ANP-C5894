@@ -13,9 +13,11 @@ class shape {
 		
 		}
 		
-		class main {
+		class shape {
 			
-      public static void main(String[] args) {
+      public static void main(String[] args) 
+      
+      {
     	  
     	 Rectangle r=new Rectangle();
     	 r.calculateArea();
